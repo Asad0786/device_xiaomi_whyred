@@ -26,15 +26,16 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
 # Inherit some common PixelExperience stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 1080x2160
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/colt/common.mk)
+$(call inherit-product, packages/apps/ColtApps/common.mk)
 
-PRODUCT_NAME := aosp_whyred
+PRODUCT_NAME := colt_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Redmi Note 5
+PRODUCT_MODEL := Redmi Note 5 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
